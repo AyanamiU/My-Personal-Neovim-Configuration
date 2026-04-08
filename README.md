@@ -34,7 +34,7 @@ mv ~/.config/nvim ~/.config/nvim.bak
 
 2. 克隆此配置：
 ```bash
-git clone <你的仓库地址> ~/.config/nvim
+git clone https://github.com/AyanamiU/My-Personal-Neovim-Configuration.git ~/.config/nvim
 ```
 
 3. 启动 Neovim，插件会自动安装：

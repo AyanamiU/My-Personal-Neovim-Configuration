@@ -49,5 +49,16 @@ map("n", "k", "l", opts)
 
 --jj控制<esc>
 map("i", 'jj', '<esc>', opts)
-
 map("n","<C-e>", ":NERDTreeToggle<CR>", opts)
+
+-- Enter: 补全菜单可见时确认选中，不换行
+map('i', '<CR>', [[coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]],
+  { expr = true, silent = true, noremap = true })
+
+-- Tab: 补全菜单可见时选择下一个，否则正常缩进
+map('i', '<TAB>', [[coc#pum#visible() ? coc#pum#next(1) : "\<TAB>"]],
+  { expr = true, silent = true, noremap = true })
+
+-- Shift+Tab: 补全菜单可见时选择上一个
+map('i', '<S-TAB>', [[coc#pum#visible() ? coc#pum#prev(1) : "\<S-TAB>"]],
+  { expr = true, silent = true, noremap = true })

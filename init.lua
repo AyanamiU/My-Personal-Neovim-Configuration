@@ -30,6 +30,7 @@ vim.opt.guicursor       = {
 }
 
 require("key-maps")
+--require("coc-keys")
 require("lazy").setup("plugins")
 
 vim.cmd('colorscheme catppuccin')
@@ -38,6 +39,6 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 	Plug('scrooloose/nerdtree', {on = 'NERDTreeToggle'})
- 	Plug('iamcco/markdown-preview.nvim', { ['do'] ='cd app && npx --yes yarn install' })
- 	Plug('madox2/vim-ai')
+	Plug('iamcco/markdown-preview.nvim', { ['do'] ='cd app && npx --yes yarn install' })
+	Plug('madox2/vim-ai')
 vim.call('plug#end')
